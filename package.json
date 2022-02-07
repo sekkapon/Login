@@ -1,0 +1,17 @@
+{
+    "dependencies": {
+        "body-parser": "^1.19.1",
+        "express": "^4.17.2",
+        "node-json-db": "^1.4.1",
+        "sha1": "^1.1.1",
+        "speakeasy": "^2.0.0",
+        "uuid": "^8.3.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
+    }
+}
