@@ -12,11 +12,11 @@ class TwoFactor {
         const id = 1; /* สมมติ id ว่าเป็น id 1 */
         try {
             /*  สร้าง secert key */
-            const temp_secret = speakeasy.generateSecret();
+            const secret = speakeasy.generateSecret();
 
             /*  สร้างข้อมูล json ใน user */
-            db.push(`/user/${id}`, { id, temp_secret });
-            res.json({ id, secret: temp_secret.base32 });
+            db.push(`/user/${id}`, { id, secret });
+            res.json({ id, secret: secret.base32 });
         } catch (err) {
             res.status(500).send({
                 'error': true,
